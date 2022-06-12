@@ -9,7 +9,7 @@ const getDetail = async (email) => {
     });
     return {
       status: details.length > 0 ? true : false,
-      details: details.length > 0 ?? "Invalid emil address",
+      details: details.length > 0 ? details : "Invalid emil address",
     };
   } catch (err) {
     console.log(err);
